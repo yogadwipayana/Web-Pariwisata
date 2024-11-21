@@ -108,11 +108,100 @@ header.sticky ul li a{
     aspect-ratio: 4/3;
     object-fit: contain;
 }
+.packages{
+    width: 100%;
+    height: 150vh;
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 150px 0 0 0;
+    /* row-gap: 50px; */
+    /* padding: 0px 30px; */
+}
+.packages h1 {
+    justify-content: start;
+    color: red;
+    font-weight: 700;
+    margin: -180px 0 0 0;
+    padding: 0;
+    position: relative;
+}
+.packages-after::after{
+    content: '';
+    position: absolute;
+    background: green;
+    width: 150%;
+    height: 2px;
+    top: 70px;
+    left: -35px;
+}
+.packages-list{
+    display: flex;
+    padding: 100px 0 0 0;
+}
+.packages-1{
+    /* background-color: antiquewhite; */
+    box-shadow: 1px 1px 10px ;
+    /* border: 1px solid black; */
+    width: 350px;
+    height: 600px;
+    margin: 20px;
+    padding: 0 0 0 0;
+}
+.packages-1 img{
+    margin: 0;
+    background-color: blue;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    width: 350px;
+    height: 150px;
+    animation-duration: 1s;
+}
+
+.img-container {
+    overflow: hidden;
+    width: 350px;
+    height: 150px;
+}
+.packages-1 img:hover{
+    animation-name: smooth-scaling;
+    animation-duration: 1s;
+}
+.packages-1 h1{
+    color: #000;
+    font-size: 30px;
+    margin: 0 0 10px 0;
+}
+.packages-1 h2{
+    color: green;
+    margin: 0 0 10px 0;
+}
+.packages-1 h3{
+    color: red;
+    margin: 0 0 10px 0;
+}
+.packages-1 p{
+    font-size: 18px;
+    margin: 0 0 10px 0;
+}
+.packages-1 ul{
+    padding: 0 0 0 15px;
+}
 @keyframes item-up{
     0% {
         transform: translateY(100px);
     }
     100% {
         transform: translateY(0);
+    }
+}
+@keyframes smooth-scaling{
+    0%{
+        scale: 1;
+    }
+    100%{
+        scale: 1.1;
     }
 }
