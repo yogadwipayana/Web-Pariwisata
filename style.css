@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Ahom&display=swap');
 :root{
     --text-color: #fff;
     --font-utama: "Poppins", sans-serif;
@@ -10,6 +10,7 @@
     padding: 0;
     box-sizing: border-box;
     /* font-family: "Poppins", sans-serif; */
+    /* font-family: "Noto Serif Ahom", serif; */
 }
 body{
     min-height: 500vh;
@@ -50,6 +51,7 @@ header.sticky{
     color: #000;
     background: #fff;
     transition: 0.5s ease-in-out;
+    z-index: 1000;
 }
 header.sticky ul li a{
     color: #000;
@@ -119,11 +121,12 @@ header.sticky ul li a{
     margin: 150px 0 0 0;
     /* row-gap: 50px; */
     /* padding: 0px 30px; */
+    font-family: "Noto Serif Ahom", serif;
 }
 .packages h1 {
     justify-content: start;
-    color: red;
-    font-weight: 700;
+    /* color: red; */
+    font-weight: 600;
     margin: -180px 0 0 0;
     padding: 0;
     position: relative;
@@ -133,61 +136,197 @@ header.sticky ul li a{
     position: absolute;
     background: green;
     width: 150%;
-    height: 2px;
+    height: 1px;
     top: 70px;
     left: -35px;
 }
 .packages-list{
     display: flex;
-    padding: 100px 0 0 0;
+    padding: 100px 30px 0 30px;
 }
 .packages-1{
     /* background-color: antiquewhite; */
-    box-shadow: 1px 1px 10px ;
-    /* border: 1px solid black; */
-    width: 350px;
-    height: 600px;
-    margin: 20px;
-    padding: 0 0 0 0;
+    box-shadow: 1px 1px 10px rgb(220, 220, 220);
+    border-radius: 10px;
+    width: 377px;
+    height: 800px;
+    margin: 0 12px 0 12px;
+    padding: 0 0 0 0px;
+}
+.text-container{
+    /* background-color: red; */
+    padding: 20px 0 0 30px;
 }
 .packages-1 img{
     margin: 0;
     background-color: blue;
-    aspect-ratio: 16/9;
-    object-fit: cover;
-    width: 350px;
-    height: 150px;
-    animation-duration: 1s;
+    aspect-ratio: 4/3;
+    object-fit: fill;
+    width: 377px;
+    animation-duration: 0.5s;
+    padding: 0;
 }
 
 .img-container {
     overflow: hidden;
-    width: 350px;
-    height: 150px;
+    width: 377px;
+    height: 220px;
+    padding: 0;
 }
 .packages-1 img:hover{
     animation-name: smooth-scaling;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
 }
 .packages-1 h1{
     color: #000;
-    font-size: 30px;
+    font-size: 19px;
+    font-weight: 600;
     margin: 0 0 10px 0;
 }
 .packages-1 h2{
-    color: green;
+    /* color: green; */
+    font-size: 15px;
+    font-weight: 300;
     margin: 0 0 10px 0;
+    color: rgb(21, 186, 131);
 }
 .packages-1 h3{
-    color: red;
+    /* color: red; */
+    font-size: 18px;
+    font-weight: 100;
+    font-style: italic;
     margin: 0 0 10px 0;
+    color: rgba(255, 0, 0, 0.9);
 }
 .packages-1 p{
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 700;
     margin: 0 0 10px 0;
 }
 .packages-1 ul{
     padding: 0 0 0 15px;
+    color: rgba(0, 0, 0, 0.5);
+    /* background-color: red; */
+    height: 340px;
+}
+.booking{
+    background-color: rgba(5, 150, 105, 1);
+    width: 235px;
+    height: 40px;
+    border-radius: 10px;
+    margin: 0 0 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.booking img{
+    background-color: transparent;
+    width: 24px;
+    height: 24px;
+    margin: 0 10px 0px 0;
+}
+.booking span{
+    color: white;
+    font-size: 14px;
+    margin: 5px 0 0 0;
+}
+
+/* Video Documentation */
+.video{
+    width: 100%;
+    height: 100vh;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-content: center; */
+    align-items: center;
+    font-family: "Noto Serif Ahom", serif;
+}
+.video h1{
+    /* color: red; */
+    /* background-color: red; */
+    height: 70px;
+    font-weight: 1000;
+    font-size: 30px;
+    position: relative;
+}
+.video h1::after{
+    content: '';
+    position: absolute;
+    background: green;
+    width: 205px;
+    height: 1pt;
+    left: 55px;
+    bottom: 0;
+}
+.video iframe{
+    margin: 35px 40px 0 40px;
+}
+
+/* footer */
+footer{
+    background-color: #f3f4f6;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    padding: 30px 15px 0 15px;
+}
+footer .name{
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+}
+footer .name h1{
+    font-size: 30px;
+}
+footer .name img{
+    width: 64px;
+    aspect-ratio: 1/1;
+    margin: 30px 10px 0 0;
+}
+footer .menu{
+    width: 315px;
+    height: 100%;
+    /* background-color: rebeccapurple; */
+}
+footer .menu p{
+    text-decoration: underline;
+    margin: 0 0 15px 0;
+}
+footer .menu ul li{
+    list-style: none;
+    margin: 0 0 10px 0;
+}
+footer .maps{
+    display: flex;
+    flex-direction: column;
+}
+footer .maps p{
+    margin: 0 0 15px 0;
+}
+footer .contact{
+    margin: 0 0 0 15px;
+    width: 290px;
+    /* background-color: red; */
+}
+footer .contact p{
+    text-transform: uppercase;
+}
+footer .contact h3{
+    margin: 15px 0 10px 0;
+}
+footer .contact ul{
+    gap: 0;
+}
+footer .contact ul li{
+    line-height: 20px;
+    list-style: none;
+    margin-bottom: 7px;
+}
+.hover-underline{
+    text-decoration: none;
+    color: #000;
 }
 @keyframes item-up{
     0% {
