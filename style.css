@@ -12,9 +12,6 @@
     /* font-family: "Poppins", sans-serif; */
     /* font-family: "Noto Serif Ahom", serif; */
 }
-body{
-    min-height: 500vh;
-}
 header{
     position: fixed;
     top: 0;
@@ -291,7 +288,6 @@ footer{
     height: 300px;
     display: flex;
     justify-content: center;
-    align-items: center;
     padding: 30px 15px 0 15px;
 }
 footer .name{
@@ -308,9 +304,10 @@ footer .name img{
     margin: 30px 10px 0 0;
 }
 footer .menu{
-    width: 315px;
+    width: 250px;
     height: 100%;
     /* background-color: rebeccapurple; */
+    padding: 0 0 0 10px;
 }
 footer .menu p{
     text-decoration: underline;
