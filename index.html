@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Pariwisata</title>
 </head>
 <body>
@@ -24,15 +25,15 @@
     </header>
     <div class="banner"><h1><b>Bali Mesari Cycling & Tours</b></h1></div>
     <div class="about-us">
-        <div class="description">
+        <div class="description" data-aos="fade-up">
             <h1>About Us</h1>
             <p><b>Bali Mesari Cycling Tours</b> was originally formed when 2 native Balinese sons who had been in the tourism world, had the same idea of making local tourism in their birthplace, namely Kelusa village, located in the Northern part of Ubud. The first son is Dewa Dena. Dewa Dena is a freelance guide who is very friendly, funny, and helpful. This makes many tourists really like Dewa Dena's professionalism as a tour guide. The guests that were handled by Dewa Dena, frequently recommended Dewa Dena as a tour guide to their friends or family when visiting Bali. The second son is Dewa Anom who worked in the hospitality industry for almost 9 years. He understood deeply about the tourism industry, especially in Bali.</p>
         </div>
-        <img class="image-about-us" src="Media/about.jpeg" alt="">
+        <img class="image-about-us" data-aos="fade-up"  data-aos-delay="500" src="Media/about.jpeg" alt="">
     </div>
     <div class="packages">
-        <h1 class="packages-after">Packages</h1>
-        <div class="packages-list">
+        <h1 class="packages-after" data-aos="fade-up">Packages</h1>
+        <div data-aos="fade-up" class="packages-list hidden">
             <div class="packages-1">
                 <div class="img-container">
                     <img src="Media/paket-1.jpg" alt="">
@@ -116,8 +117,8 @@
     
     <!-- Video Documentation -->
     <div class="video">
-        <h1>Video Documentation</h1>
-        <iframe width="1234" height="400" src="https://www.youtube.com/embed/OUd_E-_FA4o?si=VkjP-7E0_XfoyLyL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h1 class="hidden" data-aos="fade-up">Video Documentation</h1>
+        <iframe data-aos="fade-up" class="hidden" width="1234" height="400" src="https://www.youtube.com/embed/OUd_E-_FA4o?si=VkjP-7E0_XfoyLyL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
     <footer>
         <div class="name">
@@ -154,5 +155,9 @@
             </ul>
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>

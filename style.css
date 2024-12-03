@@ -12,6 +12,9 @@
     /* font-family: "Poppins", sans-serif; */
     /* font-family: "Noto Serif Ahom", serif; */
 }
+body{
+    overflow-x: hidden;
+}
 header{
     position: fixed;
     top: 0;
@@ -347,6 +350,18 @@ footer .contact ul li{
     text-decoration: none;
     color: #000;
 }
+/* .hidden {
+    transform: translateY(100%);
+    transition: all 0.2s ease-in-out;
+}
+.show{
+    transform: translateY(0);
+}
+@media(prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+} */
 @keyframes item-up{
     0% {
         transform: translateY(100px);
