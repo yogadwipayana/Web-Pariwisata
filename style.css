@@ -1,380 +1,102 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Ahom&display=swap');
-:root{
-    --text-color: #fff;
-    --font-utama: "Poppins", sans-serif;
-}
-
-*{
+/* Reset beberapa style default */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* font-family: "Poppins", sans-serif; */
-    /* font-family: "Noto Serif Ahom", serif; */
 }
-body{
-    overflow-x: hidden;
-}
-header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 30px 0 30px;
-}
-.logo{
-    width: 80px;
-    height: 70px;
-}
-header ul{
-    display: flex;
-    gap: 10px;
-    justify-content: space-between;
-    align-items: center;
-}
-header ul li{
-    list-style: none;
-}
-header ul li a{
-    margin: 0 10px;
-    text-decoration: none;
-    color: #fff;
-    font-size: 12pt;
-}
-header ul li a:hover{
-    color: green;
-}
-header.sticky{
-    color: #000;
-    background: #fff;
-    transition: 0.5s ease-in-out;
-    z-index: 1000;
-}
-header.sticky ul li a{
-    color: #000;
-}
-.banner{
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)),url(Media/banner-utama.jpg);
-    background-size: cover;
-}
-.banner h1{
-    color: #fff;
-    align-content: center;
-    font-size: 62px;
-    font-weight: 1000;
 
-    animation-name: item-up;
-    animation-duration: 0.5s;
-    animation-timing-function: ease-in;
-}
-.about-us{
-    display: flex;
-    padding: 0px 30px 0 30px;
-    /* background-color: aliceblue; */
-    margin: 150px 0 0 0;
-}
-.description{
-    display: flex;
-    flex-direction: column;
-    padding: 30px 30px;
-}
-.about-us .description h1{
-    margin: 0 0 60px 40px;
-    position: relative;
-}
-.about-us .description h1::after{
-    content: '';
-    position: absolute;
-    background: green;
-    width: 50%;
-    height: 2px;
-    top: 70px;
-    left: -40px;
-}
-.about-us .description p{
-    text-align: justify;
-    font-size: 20px;
-    margin: 30px 0 0 0;
-    line-height: 25px;
-}
-.image-about-us{
-    width: 550px;
-    aspect-ratio: 4/3;
-    object-fit: contain;
-}
-.packages{
+/* Mengatur font dasar */
+body {
     width: 100%;
-    height: 150vh;
-    /* background-color: aquamarine; */
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 150px 0 0 0;
-    /* row-gap: 50px; */
-    /* padding: 0px 30px; */
-    font-family: "Noto Serif Ahom", serif;
-}
-.packages h1 {
-    justify-content: start;
-    /* color: red; */
-    font-weight: 600;
-    margin: -180px 0 0 0;
-    padding: 0;
-    position: relative;
-}
-.packages-after::after{
-    content: '';
-    position: absolute;
-    background: green;
-    width: 150%;
-    height: 1px;
-    top: 70px;
-    left: -35px;
-}
-.packages-list{
-    display: flex;
-    padding: 100px 30px 0 30px;
-}
-.packages-1{
-    /* background-color: antiquewhite; */
-    box-shadow: 1px 1px 10px rgb(220, 220, 220);
-    border-radius: 10px;
-    width: 377px;
-    height: 850px;
-    margin: 0 12px 0 12px;
-    padding: 0 0 0 0px;
-}
-.text-container{
-    /* background-color: red; */
-    padding: 20px 0 0 30px;
-}
-.packages-1 img{
+    height: 100vh;
     margin: 0;
-    background-color: blue;
-    aspect-ratio: 4/3;
-    object-fit: cover;
-    width: 377px;
-    animation-duration: 0.5s;
-    padding: 0;
+    
+
 }
 
-.img-container {
-    overflow: hidden;
-    width: 377px;
-    height: 220px;
-    padding: 0;
+body img{
+    position: fixed;
+    z-index: -1;
+    filter: blur(100%);
 }
-.packages-1 img:hover{
-    animation-name: smooth-scaling;
-    animation-duration: 0.5s;
+
+/* Mengatur tampilan form login */
+.login-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
 }
-.packages-1 h1{
-    color: #000;
-    font-size: 19px;
-    font-weight: 600;
-    margin: 0 0 10px 0;
+
+/* Styling untuk judul form */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
 }
-.packages-1 h2{
-    /* color: green; */
-    font-size: 15px;
-    font-weight: 300;
-    margin: 0 0 10px 0;
-    color: rgb(21, 186, 131);
+
+/* Mengatur input dan label */
+.input-group {
+    margin-bottom: 20px;
 }
-.packages-1 h3{
-    /* color: red; */
-    font-size: 18px;
-    font-weight: 100;
-    font-style: italic;
-    margin: 0 0 10px 0;
-    color: rgba(255, 0, 0, 0.9);
-}
-.packages-1 p{
-    font-size: 16px;
-    font-weight: 700;
-    margin: 0 0 10px 0;
-}
-.packages-1 ul{
-    padding: 0 0 0 15px;
-    color: rgba(0, 0, 0, 0.5);
-    /* background-color: red; */
-    height: 300px;
-}
-.booking-1 {
-    background-color: rgba(5, 150, 105, 1);
-    width: 235px;
-    height: 40px;
-    border-radius: 10px;
-    margin: 100px 0 10px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.booking-2 {
-    background-color: rgba(5, 150, 105, 1);
-    width: 235px;
-    height: 40px;
-    border-radius: 10px;
-    margin: 70px 0 10px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.booking-3 {
-    background-color: rgba(5, 150, 105, 1);
-    width: 235px;
-    height: 40px;
-    border-radius: 10px;
-    margin: 70px 0 10px 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.booking-1 img,.booking-2 img,.booking-3 img{
-    background-color: transparent;
-    width: 24px;
-    height: 24px;
-    margin: 0 10px 0px 0;
-}
-.booking-1 span,.booking-2 span,.booking-3 span{
-    color: white;
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
     font-size: 14px;
-    margin: 5px 0 0 0;
+    color: #555;
 }
 
-/* Video Documentation */
-.video{
+.input-group input {
     width: 100%;
-    height: 100vh;
-    /* background-color: red; */
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    /* align-content: center; */
-    align-items: center;
-    font-family: "Noto Serif Ahom", serif;
-}
-.video h1{
-    /* color: red; */
-    /* background-color: red; */
-    height: 70px;
-    font-weight: 1000;
-    font-size: 30px;
-    position: relative;
-}
-.video h1::after{
-    content: '';
-    position: absolute;
-    background: green;
-    width: 205px;
-    height: 1pt;
-    left: 55px;
-    bottom: 0;
-}
-.video iframe{
-    margin: 35px 40px 0 40px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
 }
 
-/* footer */
-footer{
-    background-color: #f3f4f6;
+/* Styling untuk tombol login */
+.login-btn {
     width: 100%;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    padding: 30px 15px 0 15px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
-footer .name{
-    display: flex;
-    flex-direction: column;
-    width: 320px;
+
+.login-btn:hover {
+    background-color: #0056b3;
 }
-footer .name h1{
-    font-size: 30px;
+
+/* Styling untuk tautan daftar */
+.signup-link {
+    text-align: center;
+    margin-top: 10px;
 }
-footer .name img{
-    width: 64px;
-    aspect-ratio: 1/1;
-    margin: 30px 10px 0 0;
-}
-footer .menu{
-    width: 250px;
-    height: 100%;
-    /* background-color: rebeccapurple; */
-    padding: 0 0 0 10px;
-}
-footer .menu p{
-    text-decoration: underline;
-    margin: 0 0 15px 0;
-}
-footer .menu ul li{
-    list-style: none;
-    margin: 0 0 10px 0;
-}
-footer .maps{
-    display: flex;
-    flex-direction: column;
-}
-footer .maps p{
-    margin: 0 0 15px 0;
-}
-footer .contact{
-    margin: 0 0 0 50px;
-    width: 290px;
-    /* background-color: red; */
-}
-footer .contact p{
-    text-transform: uppercase;
-}
-footer .contact h3{
-    margin: 15px 0 10px 0;
-}
-footer .contact ul{
-    gap: 0;
-}
-footer .contact ul li{
-    line-height: 20px;
-    list-style: none;
-    margin-bottom: 7px;
-}
-.hover-underline{
+
+.signup-link a {
+    color: #007bff;
     text-decoration: none;
-    color: #000;
 }
-/* .hidden {
-    transform: translateY(100%);
-    transition: all 0.2s ease-in-out;
+
+.signup-link a:hover {
+    text-decoration: underline;
 }
-.show{
-    transform: translateY(0);
-}
-@media(prefers-reduced-motion) {
-    .hidden {
-        transition: none;
-    }
-} */
-@keyframes item-up{
-    0% {
-        transform: translateY(100px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-@keyframes smooth-scaling{
-    0%{
-        scale: 1;
-    }
-    100%{
-        scale: 1.1;
-    }
+.footer{
+    background-color: #333;
+    color: white;
+    padding: 5px 5px;
+    margin-top: 60%;
+    margin-left: -10%;
 }
